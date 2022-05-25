@@ -51,6 +51,7 @@ import SwiperCore, {
     Autoplay,
   } from 'swiper';
   import { Navigation, Scrollbar, A11y, Mousewheel,FreeMode} from 'swiper';
+import { blue } from '@mui/material/colors';
 SwiperCore.use([Autoplay,Navigation, Scrollbar, A11y, Mousewheel,FreeMode]);
 UIkit.use(Icons);
 const Item = styled(Paper)(({ theme }) => ({
@@ -60,6 +61,14 @@ const Item = styled(Paper)(({ theme }) => ({
     textAlign: 'center',
     color: theme.palette.text.secondary,
   }));
+
+
+  const style = {
+    height: 100,
+    width:100,
+  };
+
+
 function Main() {
   return (
     <div className='main-sec-div1'>
@@ -220,7 +229,7 @@ function Main() {
         </div>
         <div className='our-courses-flex3'>
             <div className='flex3-col-1'>
-                <Card >
+                <Card className='gsoc-card'>
                     <CardActionArea>
                         <CardMedia
                             component="img"
@@ -244,28 +253,10 @@ function Main() {
                 </Card>
             </div>
         </div>
-        <div className='ad-alumini'>
+        {/* <div className='ad-alumini'>
             <img src={img3} alt="" />
-        </div>
+        </div> */}
         <div className='ad'>
-            {/* <div className='brands'>
-                <div className='brands1'>
-                    <div className='flipkart'>
-                        <img src={img4} alt="" />
-                    </div>
-                    <div className='google'>
-                        <img src={img5} alt="" />
-                    </div>
-                </div>
-                <div className='brands2'>
-                    <div className='aamazon'>
-                        <img src={img6} alt="" />
-                    </div>
-                    <div className='vmware'>
-                        <img src={img7} alt="" />
-                    </div>
-                </div>
-            </div> */}
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={3}>
                     <Grid item xs={6} md={6} lg={3}>
@@ -322,30 +313,72 @@ function Main() {
         <div className='our-features'>
             <p>OUR <span className='features'>FEATURES</span></p>
         </div>
-        <div className='our-feature-main-div'>
-            <div className='our-feature-flex1'>
-                <div>
-                    Beginner to Advanced Level Training
-                </div>
-                <div>
-                    More Comfortable Learning Environment
-                </div>
-                <div>
-                    One Month Extended Support
-                </div>
-            </div>
-            <div className='our-feature-flex2'>
-                <div>
-                    Make discussions meaningful.
-                </div>
-                <div>
-                    Certificate from Amrita Center for Cyber Security, Amfoss and Team biOs
-                </div>
-                <div>
-                    Industry Ready Courses
-                </div>
-            </div>
+        <div className='orf-1'>
+            <Grid container spacing={3}>
+                <Grid item xs={6} md={6} lg={6}>
+                    <div className='orf1-flex'>
+                        <div className='orf1-flex-div1'>
+                            <img src={img10} alt="" />
+                        </div>
+                        <div className='orf1-flex-div2'>
+                             <p>Beginner to Advanced Level Training</p>
+                        </div>
+                    </div>
+                </Grid>
+                <Grid item xs={6} md={6} lg={6}>
+                    <div className='orf1-flex'>
+                        <div className='orf1-flex-div1'>
+                            <img src={img10} alt="" />
+                        </div>
+                        <div className='orf1-flex-div2'>
+                            <p>Make discussions meaningful.</p>
+                        </div>
+                    </div>
+                </Grid>
+                <Grid item xs={6} md={6} lg={6}>
+                    <div className='orf1-flex'>
+                        <div className='orf1-flex-div1'>
+                            <img src={img10} alt="" />
+                        </div>
+                        <div className='orf1-flex-div2'>
+                            <p>More Comfortable Learning Environment</p>
+                        </div>
+                    </div>
+                </Grid>
+                <Grid item xs={6} md={6} lg={6}>
+                    <div className='orf1-flex'>
+                        <div className='orf1-flex-div1'>
+                            <img src={img10} alt="" />
+                        </div>
+                        <div className='orf1-flex-div2'>
+                            <p>Certificate from Amrita Center for Cyber Security,<br/>Amfoss and Team biOs</p>
+                        </div>
+                    </div>
+                </Grid>
+                <Grid item xs={6} md={6} lg={6}>
+                    <div className='orf1-flex'>
+                        <div className='orf1-flex-div1'>
+                            <img src={img10} alt="" />
+                        </div>
+                        <div className='orf1-flex-div2'>
+                            <p>One Month Extended Support</p>
+                        </div>
+                    </div>
+                </Grid>
+                <Grid item xs={6} md={6} lg={6}>
+                    <div className='orf1-flex'>
+                        <div className='orf1-flex-div1'>
+                            <img src={img10} alt="" />
+                        </div>
+                        <div className='orf1-flex-div2'>
+                            <p>Industry Ready Courses</p>
+                        </div>
+                    </div>
+                </Grid>
+            </Grid>
         </div>
+            {/* </div>
+        </div> */}
         <div className='slide'> 
             <Swiper className="mySwiper"  id='main'
                                 slidesPerView={1}
@@ -358,54 +391,89 @@ function Main() {
                                 scrollbar={{ draggable: true }}
                                 loop={true}
                                 navigation={true}>
-                <SwiperSlide ><img src={img8} alt="" /></SwiperSlide>
-                <SwiperSlide ><img src={img9} alt="" /></SwiperSlide>
-                <SwiperSlide ><img src={img10} alt="" className='face' /></SwiperSlide>
+                <SwiperSlide>
+                    <div>
+                        <h2>What do other leaner's have to say</h2>
+                    </div>
+                    <div>
+                        <img src={img8} alt="" />
+                    </div>
+                    <div>
+                        <h4>20 december 2020</h4>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide >
+                    <div>
+                        <h2>What do other leaner's have to say</h2>
+                    </div>
+                    <div>
+                        <img src={img9} alt="" />
+                    </div>
+                    <div>
+                        <h4>2 January 2021</h4>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide >
+                    <div>
+                        <h2>What do other leaner's have to say</h2>
+                    </div>
+                    <div>
+                        <img src={img10} alt="" className='face' />
+                    </div>
+                    <div>
+                        <h4>20 January 2021</h4>
+                    </div>
+                </SwiperSlide>
             </Swiper>
         </div>
-        <div className='footer'>
-            <div className=''>
-                <div>amFOSS Trainings</div>
-                <p>Don't hesitate to give us a call or send us a message in our social media</p>
-                <div className='social-media'>
-                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                      <div uk-icon="icon: facebook; ratio: 2"></div>
-                    </a>
-                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
-                      <div uk-icon="icon: twitter; ratio: 2"></div>
-                    </a> 
-                    <a href='https://www.instagram.com/' target="_blank" rel="noopener noreferrer">
-                      <div uk-icon="icon: instagram; ratio: 2"></div>
-                    </a>  
-                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-                      <div uk-icon="icon: linkedin; ratio: 2"></div>
-                    </a> 
-                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-                      <div uk-icon="icon:  github; ratio: 2"></div>
-                    </a> 
+        <div>
+            <div className='footer-flex-1'>
+                <div className=''>
+                    <div>amFOSS Trainings</div>
+                    <p>Don't hesitate to give us a call or send us a message in our social media</p>
+                    <div className='social-media'>
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                        <div uk-icon="icon: facebook; ratio: 2"></div>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                        <div uk-icon="icon: twitter; ratio: 2"></div>
+                        </a> 
+                        <a href='https://www.instagram.com/' target="_blank" rel="noopener noreferrer">
+                        <div uk-icon="icon: instagram; ratio: 2"></div>
+                        </a>  
+                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                        <div uk-icon="icon: linkedin; ratio: 2"></div>
+                        </a> 
+                        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                        <div uk-icon="icon:  github; ratio: 2"></div>
+                        </a> 
+                    </div>
+                </div>
+                <div className=''>
+                    <div>
+                        <h4>Or Location</h4>
+                        <p>Amritapuri, Kollam, Kerala, India.</p>
+                    </div>
+                    <div>
+                        <h4>Our Location</h4>
+                        <p>shogilpp@am.amrita.edu</p>
+                        <p>rahulm@am.amrita.edu</p>
+                    </div>
+                    <div>
+                        <h4>Website</h4>
+                        <p>www.amfoss.in</p>
+                    </div>
+                    <div>
+                        <h4>Contact Number</h4>
+                        <p>9745626449</p>
+                    </div>
+                </div>
+                <div className=''>
+                    <h1>Gallery</h1>
                 </div>
             </div>
-            <div className=''>
-                <div>
-                    <h4>Our Location</h4>
-                    <p>Amritapuri, Kollam, Kerala, India.</p>
-                </div>
-                <div>
-                    <h4>Our Location</h4>
-                    <p>shogilpp@am.amrita.edu</p>
-                    <p>rahulm@am.amrita.edu</p>
-                </div>
-                <div>
-                    <h4>Website</h4>
-                    <p>www.amfoss.in</p>
-                </div>
-                <div>
-                    <h4>Contact Number</h4>
-                    <p>9745626449</p>
-                </div>
-            </div>
-            <div className=''>
-                <h1>Gallery</h1>
+            <div className='copyright'>
+
             </div>
         </div>
     </div>
