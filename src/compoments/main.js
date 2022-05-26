@@ -4,8 +4,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import 'swiper/css';
+import { Link } from "react-router-dom";
 import img2 from './assets/background.jpg'
-import img3 from './assets/alumni21.png'
 import img4 from './assets/16_flipkart.svg'
 import img5 from './assets/01_google.svg'
 import img6 from './assets/brand4.png'
@@ -15,11 +15,10 @@ import img9 from './assets/user-female.png'
 import img10 from './assets/james-brown.png'
 import img11 from './assets/full-stack.jpeg'
 import img12  from './assets/flutter-logo-4k-qn.jpg'
-import img13 from './assets/Traboda.png'
+import img13 from './assets/Traboda-1.jpg'
 import img14 from './assets/ARDUINO.png'
 import img15 from './assets/code-it-your-way.jpg'
 import img16 from './assets/Malware-analysis.jpg'
-import img17 from './assets/Gsoc2020.jpg'
 import img18 from './assets/02_microsoft.svg'
 import img19 from './assets/03_intel.svg'
 import img20 from './assets/04_ibm.svg'
@@ -32,6 +31,13 @@ import img26 from './assets/21_salesforce.svg'
 import img27 from './assets/23_sap.svg'
 import img28 from './assets/19_reuters.svg'
 import img29 from './assets/26_motorola.svg'
+import img30 from './assets/logo_light.png'
+import img31 from './assets/class.png'
+import img32 from './assets/comment-discussion.png'
+import img33 from './assets/learning.png'
+import img34 from './assets/diploma.png'
+import img35 from './assets/online-support--v1.png'
+import img36 from './assets/classroom.png'
 import '../../node_modules/uikit/dist/js/uikit'
 import '../../node_modules/uikit/dist/css/uikit.css'
 import Icons from'../../node_modules/uikit/dist/js/uikit-icons'
@@ -51,7 +57,7 @@ import SwiperCore, {
     Autoplay,
   } from 'swiper';
   import { Navigation, Scrollbar, A11y, Mousewheel,FreeMode} from 'swiper';
-import { blue } from '@mui/material/colors';
+// import { blue } from '@mui/material/colors';
 SwiperCore.use([Autoplay,Navigation, Scrollbar, A11y, Mousewheel,FreeMode]);
 UIkit.use(Icons);
 const Item = styled(Paper)(({ theme }) => ({
@@ -63,10 +69,10 @@ const Item = styled(Paper)(({ theme }) => ({
   }));
 
 
-  const style = {
-    height: 100,
-    width:100,
-  };
+//   const style = {
+//     height: 100,
+//     width:100,
+//   };
 
 
 function Main() {
@@ -89,7 +95,7 @@ function Main() {
                         alt="full-stact-web"
                     />
                     <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
+                        <Typography gutterBottom variant="h6" component="div">
                             FULL - STACK WEB DEVELOPMENT
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
@@ -98,8 +104,7 @@ function Main() {
                     </CardContent>
                 </CardActionArea>
                 <CardActions>
-                    <Button size="small">Share</Button>
-                    <Button size="small">Learn More</Button>
+                    <Button size="small"><Link to={'/web-development'}>View Course Details</Link></Button>
                 </CardActions>
             </Card>
 
@@ -114,7 +119,7 @@ function Main() {
                     alt="flutter"
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
+                    <Typography gutterBottom variant="h6" component="div">
                         FLUTTER DEVELOPMENT COURSE
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
@@ -123,8 +128,7 @@ function Main() {
                 </CardContent>
                 </CardActionArea>
                 <CardActions>
-                    <Button size="small">Share</Button>
-                    <Button size="small">Learn More</Button>
+                    <Button size="small"><Link to={'/flutter'}>View Course Details</Link></Button>
                 </CardActions>
             </Card>
             </div>
@@ -138,7 +142,7 @@ function Main() {
                         alt="Traboda"
                     />
                     <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
+                        <Typography gutterBottom variant="h6" component="div">
                             TRABODA CERTIFIED WEB APPLICATION PENTESTER
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
@@ -147,8 +151,7 @@ function Main() {
                     </CardContent>
                 </CardActionArea>
                 <CardActions>
-                    <Button size="small">Share</Button>
-                    <Button size="small">Learn More</Button>
+                    <Button size="small"><Link to={'/traboda'}>View Course Details</Link></Button>
                 </CardActions>
             </Card>
             </div>
@@ -164,7 +167,7 @@ function Main() {
                             alt="Arduino"
                         />
                         <CardContent>
-                            <Typography gutterBottom variant="h5" component="div">
+                            <Typography gutterBottom variant="h6" component="div">
                                 ARDUINO COURSE FOR BEGINNERS
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
@@ -173,8 +176,7 @@ function Main() {
                         </CardContent>
                     </CardActionArea>
                     <CardActions>
-                        <Button size="small">Share</Button>
-                        <Button size="small">Learn More</Button>
+                        <Button size="small"><Link to={'/arduino'}>View Course Details</Link></Button>
                     </CardActions>
                 </Card>
             </div>
@@ -188,7 +190,7 @@ function Main() {
                             alt="code it in your way"
                         />
                         <CardContent>
-                            <Typography gutterBottom variant="h5" component="div">
+                            <Typography gutterBottom variant="h6" component="div">
                                 CODE IT IN YOUR WAY
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
@@ -197,8 +199,7 @@ function Main() {
                         </CardContent>
                     </CardActionArea>
                     <CardActions>
-                        <Button size="small">Share</Button>
-                        <Button size="small">Learn More</Button>
+                        <Button size="small"><Link to={'/code-it-in-your-way'}>View Course Details</Link></Button>
                     </CardActions>
                 </Card>
             </div>
@@ -212,50 +213,20 @@ function Main() {
                             alt="Malware-analysis"
                         />
                         <CardContent>
-                            <Typography gutterBottom variant="h5" component="div">
+                            <Typography gutterBottom variant="h6" component="div">
                                 INTRODUCTION TO MALWARE ANALYSIS
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
-                                More details update soon.
+                                Malware analysis is the study or process of determining the functionality, origin and potential impact of a given malware sample such as a virus, worm, trojan horse, rootkit, or backdoor. Malware or malicious software is any computer software intended to harm the host operating system or to steal sensitive data from users, organizations or companies. Malware may include software that gathers user information without permission.
                             </Typography>
                         </CardContent>
                     </CardActionArea>
                     <CardActions>
-                        <Button size="small">Share</Button>
-                        <Button size="small">Learn More</Button>
+                        <Button size="small"><Link to={'/malware'}>View Course Details</Link></Button>
                     </CardActions>
                 </Card>
             </div>
         </div>
-        <div className='our-courses-flex3'>
-            <div className='flex3-col-1'>
-                <Card className='gsoc-card'>
-                    <CardActionArea>
-                        <CardMedia
-                            component="img"
-                            height="140"
-                            src={img17}
-                            alt="GSOC"
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h5" component="div">
-                                CRACKING GOOGLE SUMMER OF CODE COURSE(GSOC)
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                More details update soon.
-                            </Typography>
-                        </CardContent>
-                    </CardActionArea>
-                    <CardActions>
-                        <Button size="small">Share</Button>
-                        <Button size="small">Learn More</Button>
-                    </CardActions>
-                </Card>
-            </div>
-        </div>
-        {/* <div className='ad-alumini'>
-            <img src={img3} alt="" />
-        </div> */}
         <div className='ad'>
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={3}>
@@ -318,7 +289,7 @@ function Main() {
                 <Grid item xs={6} md={6} lg={6}>
                     <div className='orf1-flex'>
                         <div className='orf1-flex-div1'>
-                            <img src={img10} alt="" />
+                            <img src={img31} alt="" />
                         </div>
                         <div className='orf1-flex-div2'>
                              <p>Beginner to Advanced Level Training</p>
@@ -328,7 +299,7 @@ function Main() {
                 <Grid item xs={6} md={6} lg={6}>
                     <div className='orf1-flex'>
                         <div className='orf1-flex-div1'>
-                            <img src={img10} alt="" />
+                            <img src={img32} alt="" />
                         </div>
                         <div className='orf1-flex-div2'>
                             <p>Make discussions meaningful.</p>
@@ -338,7 +309,7 @@ function Main() {
                 <Grid item xs={6} md={6} lg={6}>
                     <div className='orf1-flex'>
                         <div className='orf1-flex-div1'>
-                            <img src={img10} alt="" />
+                            <img src={img33} alt="" />
                         </div>
                         <div className='orf1-flex-div2'>
                             <p>More Comfortable Learning Environment</p>
@@ -348,7 +319,7 @@ function Main() {
                 <Grid item xs={6} md={6} lg={6}>
                     <div className='orf1-flex'>
                         <div className='orf1-flex-div1'>
-                            <img src={img10} alt="" />
+                            <img src={img34} alt="" />
                         </div>
                         <div className='orf1-flex-div2'>
                             <p>Certificate from Amrita Center for Cyber Security,<br/>Amfoss and Team biOs</p>
@@ -358,7 +329,7 @@ function Main() {
                 <Grid item xs={6} md={6} lg={6}>
                     <div className='orf1-flex'>
                         <div className='orf1-flex-div1'>
-                            <img src={img10} alt="" />
+                            <img src={img35} alt="" />
                         </div>
                         <div className='orf1-flex-div2'>
                             <p>One Month Extended Support</p>
@@ -368,7 +339,7 @@ function Main() {
                 <Grid item xs={6} md={6} lg={6}>
                     <div className='orf1-flex'>
                         <div className='orf1-flex-div1'>
-                            <img src={img10} alt="" />
+                            <img src={img36} alt="" />
                         </div>
                         <div className='orf1-flex-div2'>
                             <p>Industry Ready Courses</p>
@@ -426,39 +397,47 @@ function Main() {
                 </SwiperSlide>
             </Swiper>
         </div>
-        <div>
+        <div className='main-footer'>
             <div className='footer-flex-1'>
-                <div className=''>
-                    <div>amFOSS Trainings</div>
-                    <p>Don't hesitate to give us a call or send us a message in our social media</p>
+                <div className='footer-flex1-div1'>
+                    <div className='footer-logo'>
+                        <img src={img30} alt="logo" />
+                    </div>
+                    <div>
+                        <h3>AMFOSS TRAININGS</h3> 
+                        <p>Don't hesitate to give us a call or send us a message in our social media</p>
+                    </div>
                     <div className='social-media'>
                         <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                        <div uk-icon="icon: facebook; ratio: 2"></div>
+                        <div uk-icon="icon: facebook; ratio: 1.2"></div>
                         </a>
                         <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
-                        <div uk-icon="icon: twitter; ratio: 2"></div>
+                        <div uk-icon="icon: twitter; ratio: 1.2"></div>
                         </a> 
                         <a href='https://www.instagram.com/' target="_blank" rel="noopener noreferrer">
-                        <div uk-icon="icon: instagram; ratio: 2"></div>
+                        <div uk-icon="icon: instagram; ratio: 1.2"></div>
                         </a>  
                         <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-                        <div uk-icon="icon: linkedin; ratio: 2"></div>
+                        <div uk-icon="icon: linkedin; ratio: 1.2"></div>
                         </a> 
                         <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-                        <div uk-icon="icon:  github; ratio: 2"></div>
+                        <div uk-icon="icon:  github; ratio: 1.2"></div>
                         </a> 
                     </div>
                 </div>
-                <div className=''>
+                <div className='footer-flex1-div2'>
                     <div>
-                        <h4>Or Location</h4>
+                        <h4>Our Location</h4>
                         <p>Amritapuri, Kollam, Kerala, India.</p>
                     </div>
                     <div>
-                        <h4>Our Location</h4>
+                        <h4>Our Email</h4>
                         <p>shogilpp@am.amrita.edu</p>
                         <p>rahulm@am.amrita.edu</p>
+                        <p>amritapurifoss@gmail.com</p>
                     </div>
+                </div>
+                <div className='footer-flex1-div3'>
                     <div>
                         <h4>Website</h4>
                         <p>www.amfoss.in</p>
@@ -466,14 +445,13 @@ function Main() {
                     <div>
                         <h4>Contact Number</h4>
                         <p>9745626449</p>
+                        <h4 style={{padding:0,margin:0}}>To Contact Administrator: admin@amfoss.in</h4>
+                        <p>For Support:support@amfoss.in</p>
                     </div>
-                </div>
-                <div className=''>
-                    <h1>Gallery</h1>
                 </div>
             </div>
             <div className='copyright'>
-
+                <p>Copyright © 2021. All rights reserved by team amFOSS</p>
             </div>
         </div>
     </div>

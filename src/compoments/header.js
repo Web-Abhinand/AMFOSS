@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react'
 import './header.css'
 import img1 from './assets/Training3.png'
 function Header() {

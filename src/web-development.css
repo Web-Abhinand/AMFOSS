@@ -1,0 +1,38 @@
+.fswd-main-div1{
+    width: 100%;
+    margin: 0 auto;
+}
+.fswd-main-flex-1{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+}
+.fswd-main-flex-div1{
+    width: 50%;
+    border: 1px solid red;
+    position: relative;
+    height: 80vh;
+}
+.k1{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.fswd-main-icon{
+    width: 15%;
+    margin: 0 auto;
+    border: 1px solid red;
+    margin-left: 0;
+    margin-bottom: 1rem;
+}
+.fswd-main-icon img{
+    height: 100px;
+    object-fit: cover;
+}
+.fswd-main-heading{
+
+}
+.fswd-main-flex-div2{
+    width: 50%;
+    border: 1px solid red;
+}
