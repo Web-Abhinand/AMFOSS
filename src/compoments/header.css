@@ -8,11 +8,10 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    margin: 0 auto;
     background-color: #4f4f4f;
     opacity: 0.7;
     z-index: 1;
+    user-select: none;
 }
 .nav-flex{
     display: flex;
@@ -23,10 +22,49 @@
 }
 .logo{
     margin-left: 3rem;
+    background-color: transparent;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 .nav-links{
     display: flex;
     gap: 20px;
     align-items: center;
     margin-right: 3rem;
+}
+.hamburgermenu{
+    display: none;
+}
+.Mobile-menu{
+    display: none;
+}
+@media (max-width:600px){
+    .nav-links{
+        display: none;
+    }
+    .hamburgermenu{
+        display: flex;
+        align-items: center;
+        margin-right: 2rem;
+        border: 1px solid red;
+        flex-shrink: none;
+        width: 50px;
+    }
+    .ham{
+        width: 50px;
+        color: rgb(129, 118, 20);
+    }
+    .Mobile-menu{
+        display: block;
+    }
+    .Mobile-menu button{
+        height: 2rem;
+        display: block;
+        width: 100%;
+    }
+    .logo{
+        margin-left: 1rem;
+    }
 }

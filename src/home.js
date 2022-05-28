@@ -22,7 +22,7 @@ function Home() {
     },[])
   return (
       <div>
-        {show?<Header />:null}
+        {show?<Header />:null} 
         <Main />
       </div>
   )

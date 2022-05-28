@@ -286,7 +286,7 @@ function Main() {
         </div>
         <div className='orf-1'>
             <Grid container spacing={3}>
-                <Grid item xs={6} md={6} lg={6}>
+                <Grid item xs={12} sm={12} md={6} lg={6} className="k5">
                     <div className='orf1-flex'>
                         <div className='orf1-flex-div1'>
                             <img src={img31} alt="" />
@@ -296,7 +296,7 @@ function Main() {
                         </div>
                     </div>
                 </Grid>
-                <Grid item xs={6} md={6} lg={6}>
+                <Grid item xs={12} sm={12} md={6} lg={6}>
                     <div className='orf1-flex'>
                         <div className='orf1-flex-div1'>
                             <img src={img32} alt="" />
@@ -306,7 +306,7 @@ function Main() {
                         </div>
                     </div>
                 </Grid>
-                <Grid item xs={6} md={6} lg={6}>
+                <Grid item xs={12} sm={12} md={6} lg={6}>
                     <div className='orf1-flex'>
                         <div className='orf1-flex-div1'>
                             <img src={img33} alt="" />
@@ -316,7 +316,7 @@ function Main() {
                         </div>
                     </div>
                 </Grid>
-                <Grid item xs={6} md={6} lg={6}>
+                <Grid item xs={12} sm={12} md={6} lg={6}>
                     <div className='orf1-flex'>
                         <div className='orf1-flex-div1'>
                             <img src={img34} alt="" />
@@ -326,7 +326,7 @@ function Main() {
                         </div>
                     </div>
                 </Grid>
-                <Grid item xs={6} md={6} lg={6}>
+                <Grid item xs={12} sm={12} md={6} lg={6}>
                     <div className='orf1-flex'>
                         <div className='orf1-flex-div1'>
                             <img src={img35} alt="" />
@@ -336,7 +336,7 @@ function Main() {
                         </div>
                     </div>
                 </Grid>
-                <Grid item xs={6} md={6} lg={6}>
+                <Grid item xs={12} sm={12} md={6} lg={6}>
                     <div className='orf1-flex'>
                         <div className='orf1-flex-div1'>
                             <img src={img36} alt="" />
@@ -407,23 +407,6 @@ function Main() {
                         <h3>AMFOSS TRAININGS</h3> 
                         <p>Don't hesitate to give us a call or send us a message in our social media</p>
                     </div>
-                    <div className='social-media'>
-                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                        <div uk-icon="icon: facebook; ratio: 1.2"></div>
-                        </a>
-                        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
-                        <div uk-icon="icon: twitter; ratio: 1.2"></div>
-                        </a> 
-                        <a href='https://www.instagram.com/' target="_blank" rel="noopener noreferrer">
-                        <div uk-icon="icon: instagram; ratio: 1.2"></div>
-                        </a>  
-                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-                        <div uk-icon="icon: linkedin; ratio: 1.2"></div>
-                        </a> 
-                        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-                        <div uk-icon="icon:  github; ratio: 1.2"></div>
-                        </a> 
-                    </div>
                 </div>
                 <div className='footer-flex1-div2'>
                     <div>
@@ -447,6 +430,23 @@ function Main() {
                         <p>9745626449</p>
                         <h4 style={{padding:0,margin:0}}>To Contact Administrator: admin@amfoss.in</h4>
                         <p>For Support:support@amfoss.in</p>
+                        <div className='social-media'>
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                            <div uk-icon="icon: facebook; ratio: 1.2"></div>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                            <div uk-icon="icon: twitter; ratio: 1.2"></div>
+                            </a> 
+                            <a href='https://www.instagram.com/' target="_blank" rel="noopener noreferrer">
+                            <div uk-icon="icon: instagram; ratio: 1.2"></div>
+                            </a>  
+                            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                            <div uk-icon="icon: linkedin; ratio: 1.2"></div>
+                            </a> 
+                            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                            <div uk-icon="icon:  github; ratio: 1.2"></div>
+                            </a> 
+                        </div>
                     </div>
                 </div>
             </div>
